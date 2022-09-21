@@ -13,7 +13,7 @@ class CustomTableViewCell: UITableViewCell {
     
     lazy var image: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
         
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ class CustomTableViewCell: UITableViewCell {
             self.containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
             self.containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             self.image.heightAnchor.constraint(equalTo: self.containerView.heightAnchor),
-            self.image.widthAnchor.constraint(equalToConstant: 50.0),
+            self.image.widthAnchor.constraint(equalToConstant: 30.0),
             self.image.topAnchor.constraint(equalTo: self.containerView.topAnchor),
             self.image.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor),
             self.image.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor, constant: -20.0),
