@@ -48,6 +48,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
         
         cell?.image.image = UIImage(named: "Logo")
+        cell?.label.text = "Texto célula"
                 
         return cell ?? UITableViewCell()
     }
