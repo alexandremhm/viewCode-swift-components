@@ -12,10 +12,16 @@ class FavoriteViewController: UIViewController {
         return view
     }()
     
+    @objc func buttonAction(sender: UIButton!) {
+        self.dismiss(animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        favoriteModal.closeImage.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         view.addSubview(viewContainer)
         setup()
@@ -27,7 +33,7 @@ class FavoriteViewController: UIViewController {
         let TOP_CARD_DISTANCE: CGFloat = 10.0
            
            // calculate height of everything inside that stackview
-           var height: CGFloat = 200.0
+           var height: CGFloat = 300.0
            for v in self.viewContainer.subviews {
                height = height + v.frame.size.height
            }

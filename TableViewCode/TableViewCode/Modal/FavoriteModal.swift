@@ -39,10 +39,10 @@ class FavoriteModal: UIView {
         return descriptionLabel
     }()
     
-    lazy var closeImage: UIImageView = {
-        let closeImage = UIImageView()
-        closeImage.image = UIImage(systemName: "xmark")
-        closeImage.contentMode = .scaleAspectFit
+    lazy var closeImage: UIButton = {
+        let closeImage = UIButton()
+        closeImage.setImage(UIImage(systemName: "xmark"), for: .normal)
+        closeImage.tintColor = .black
         closeImage.translatesAutoresizingMaskIntoConstraints = false
         return closeImage
     }()
@@ -52,6 +52,7 @@ class FavoriteModal: UIView {
         self.descriptionText = descriptionText
         self.titleLabelText = titleLabelText
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        
         setup()
     }
     
@@ -61,21 +62,21 @@ class FavoriteModal: UIView {
         self.addSubview(image)
         self.addSubview(descriptionLabel)
         self.addSubview(closeImage)
-        
+                
         self.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            closeImage.topAnchor.constraint(equalTo: self.topAnchor),
-            closeImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0),
-            
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
+            closeImage.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -50.0),
+            closeImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30.0),
+
             image.widthAnchor.constraint(equalToConstant: 80.0),
             image.heightAnchor.constraint(equalToConstant: 80.0),
             image.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 50.0),
             image.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            
+
             descriptionLabel.widthAnchor.constraint(equalToConstant: 200),
             descriptionLabel.topAnchor.constraint(equalTo: image.topAnchor, constant: 100.0),
             descriptionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
