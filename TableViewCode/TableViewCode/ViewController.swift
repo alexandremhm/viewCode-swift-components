@@ -1,31 +1,38 @@
-//
-//  ViewController.swift
-//  Brewery
-//
-//  Created by Matheus Henrique Mendes Alexandre on 20/09/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-
+    
+    @objc func buttonAction(sender: UIButton!) {
+        let favoriteViewController = FavoriteViewController()
+        favoriteViewController.modalPresentationStyle = .formSheet
+        
+        self.present(favoriteViewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.view.addSubview(self.tableView)
-        self.configConstraints()
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+          button.backgroundColor = .green
+          button.setTitle("Test Button", for: .normal)
+          button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        view.addSubview(button)
+//        configConstraints()
+//        self.view.addSubview(self.tableView)
+//        self.configConstraints()
         // Do any additional setup after loading the view.
     }
     

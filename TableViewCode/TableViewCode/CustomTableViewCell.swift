@@ -21,10 +21,11 @@ class CustomTableViewCell: UITableViewCell {
     }()
     
     let containerView:UIView = {
-      let view = UIView()
-      view.translatesAutoresizingMaskIntoConstraints = false
-      view.clipsToBounds = true // this will make sure its children do not go out of the boundary
-      return view
+        let view = UIView()
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

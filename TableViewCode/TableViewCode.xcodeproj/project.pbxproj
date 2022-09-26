@@ -14,6 +14,8 @@
 		1BB8294928DBA38F00AA781A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB8294728DBA38F00AA781A /* LaunchScreen.storyboard */; };
 		1BB8295128DBA44A00AA781A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB8295028DBA44A00AA781A /* CustomTableViewCell.swift */; };
 		1BD8B1DF28DBA8B00013702E /* TesteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD8B1DE28DBA8B00013702E /* TesteCell.swift */; };
+		1BF7372B28E1E596006DA5C1 /* FavoriteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7372A28E1E596006DA5C1 /* FavoriteModal.swift */; };
+		1BF7372D28E1E81F006DA5C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7372C28E1E81F006DA5C1 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1BB8294A28DBA38F00AA781A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BB8295028DBA44A00AA781A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		1BD8B1DE28DBA8B00013702E /* TesteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteCell.swift; sourceTree = "<group>"; };
+		1BF7372A28E1E596006DA5C1 /* FavoriteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModal.swift; sourceTree = "<group>"; };
+		1BF7372C28E1E81F006DA5C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		1BB8293B28DBA38C00AA781A /* TableViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				1BF7372928E1E587006DA5C1 /* Modal */,
 				1BB8293C28DBA38C00AA781A /* AppDelegate.swift */,
 				1BB8293E28DBA38C00AA781A /* SceneDelegate.swift */,
 				1BB8294028DBA38C00AA781A /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				1BB8294A28DBA38F00AA781A /* Info.plist */,
 			);
 			path = TableViewCode;
+			sourceTree = "<group>";
+		};
+		1BF7372928E1E587006DA5C1 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1BF7372A28E1E596006DA5C1 /* FavoriteModal.swift */,
+				1BF7372C28E1E81F006DA5C1 /* FavoriteViewController.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB8294128DBA38C00AA781A /* ViewController.swift in Sources */,
+				1BF7372B28E1E596006DA5C1 /* FavoriteModal.swift in Sources */,
 				1BB8293D28DBA38C00AA781A /* AppDelegate.swift in Sources */,
+				1BF7372D28E1E81F006DA5C1 /* FavoriteViewController.swift in Sources */,
 				1BB8295128DBA44A00AA781A /* CustomTableViewCell.swift in Sources */,
 				1BD8B1DF28DBA8B00013702E /* TesteCell.swift in Sources */,
 				1BB8293F28DBA38C00AA781A /* SceneDelegate.swift in Sources */,
